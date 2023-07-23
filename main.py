@@ -1,5 +1,6 @@
 import numpy as np
 import rk4
+import plots as plt
 
 H0 = 10.
 t0 = 100.
@@ -25,3 +26,5 @@ while x <= x_end:
 
 
 np.savez('rk4tables', x=x_list, t=t_list, H=H_list)
+
+plt.show()

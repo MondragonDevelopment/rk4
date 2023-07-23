@@ -1,8 +1,10 @@
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 
+mpl.style.use('dark_background')
+
 with np.load('rk4tables.npz') as tables:
-    print(tables.files)
 
     fig, axes = plt.subplots(1,2,figsize=(7,3))
 
@@ -22,6 +24,7 @@ with np.load('rk4tables.npz') as tables:
 
     plt.subplots_adjust(wspace=0.3)
 
-    plt.show()
+    def show():
+        plt.show()
 
 
