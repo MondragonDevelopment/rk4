@@ -8,4 +8,4 @@ def dHdx(x, t, H):
 
 
 def dtdx(x, t, H):
-    return -H
+    return H

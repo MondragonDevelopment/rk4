@@ -1,11 +1,12 @@
 import numpy as np
 import rk4
 import plots as plt
+import functions as f
 
-H0 = 10.
-t0 = 100.
+H0 = 8.
+t0 = 1.
 x0 = 0.
-x_end = 1.
+x_end = 2.
 dx = 0.01
 
 x_list = np.array([x0])
@@ -18,7 +19,7 @@ H = H0
 
 
 while x <= x_end:
-    x, t, H = rk4.method(x, t, H, dx)
+    x, t, H = rk4.method(x, t, H, dx, f.dtdx, f.dHdx)
 
     x_list = np.append(x_list, x)
     t_list = np.append(t_list, t)
