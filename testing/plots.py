@@ -12,6 +12,6 @@ def show():
         ax.set_xlabel("$x$")
         ax.set_ylabel("$y$")
 
-        ax.text(0.5,0.5,r"$y(2)=%.2f$" % tables['y'][-1], horizontalalignment='center',
+        ax.text(0.5,0.5,r"$y(2)=%.2f$" % tables['y'][-2], horizontalalignment='center',
          verticalalignment='center', transform=ax.transAxes)
     plt.show()

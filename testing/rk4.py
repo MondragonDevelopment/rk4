@@ -7,6 +7,5 @@ def method(x, y, z, dx, dydx):  # Runge-Kutta Coupled Method
     k4 = dx * dydx(x + dx, y + k3)
 
     z = z + 1. / 6. * (k1 + 2 * k2 + 2 * k3 + k4)
-    x = x + dx
 
-    return x, z
+    return z
